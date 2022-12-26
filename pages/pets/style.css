@@ -1,0 +1,149 @@
+/*Обнуление*/
+
+*, 
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html, body {
+	height: 100%;
+	line-height: 1;
+	
+}
+
+body {
+	font-family: Rubik;
+	font-size: 12px;
+	color: #616161;
+
+}
+
+
+/*Ограничивающий контейнер*/
+[class*="__conteiner"] {
+	max-width: 1200px;
+	margin: 0px auto;
+
+}
+
+.wrapper {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
+
+}
+
+.header__textLogoOurPets{
+	font-family: 'Georgia';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 110%;
+	letter-spacing: 0.06em;
+	color: #545454;
+	padding-top: 30px
+
+}
+
+.header__textLogoBottomOurPets{
+	position: relative;
+	top: 50px;
+	right: 183px;
+	font-family: 'Arial';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 15px;
+	letter-spacing: 0.1em;
+	color: #292929;
+
+}
+.menu__listOurPets {
+	
+	display: flex;
+	gap: 35px;
+	padding-top: 46px;
+}
+
+.menu__linkOurPets{
+	font-family: 'Arial';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 160%;
+	color: #545454;
+}
+
+.menu__linkOurPets:hover{
+	color: #292929;
+}
+
+.menu__link:focus, #click {
+	padding-bottom: 3px;
+	border-bottom: 3px solid #F1CDB3;;
+}
+
+
+/**/
+
+.our__friendsPage{
+	margin-top:50px;
+	background: #F6F6F6;
+	padding: 80px 0px 0px 0px;
+}
+
+.our__friends_bodyOurPets{
+	display: flex;
+	gap: 40px 30px;
+	flex-wrap: wrap;
+	margin-top: 60px;
+
+}
+.buttonsSwitches{
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+
+}
+.buttonsSwitch{
+	border: 2px solid #F1CDB3;
+	border-radius: 100px;
+	width: 52px;
+	height: 52px;
+	background: #F6F6F6;
+	margin: 60px 0px 100px 0px;
+	cursor: pointer;
+}
+
+button.clicking {
+	border: 2px solid #CDCDCD;
+	color:#CDCDCD;
+}
+
+button.color{
+	background: #F1CDB3;
+}
+
