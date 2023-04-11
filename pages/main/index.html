@@ -10,20 +10,42 @@
 <body>
 <div id="pet-pop-up" class="pup-up hidden">
     <div class="pup-up-content">
-        <button class="pupUpClose" type="button">
+        <button class="pupUpClose" id="pupUpClose" type="button">
             <span class="materialIcons">close</span>
         </button>
-        <img id="petListImg" src="" class="petListImg">
-        <div class="petInfoBlock">
-            <h3 class="pupUpTitle"></h3>
-            <h4 class ="pupUpSubtitle"></h4>
-            <p class="pupUpDescription"></p>
-            <ul>
-                <li class="pupUpAge"></li>
-                <li class="pupUpInoculations"></li>
-                <li class="pupUpDiseases"></li>
-                <li class="pupUpParasites"></li>
-            </ul>
+        <div class="pupUpWrapper">
+            <div class="pupUpContainer">
+                <div class="pupUpImage">
+                    <img id="petListImg" src="" class="petListImg">
+                </div>
+                <div class="petInfoBlock">
+                    <h3 id="pupUpTitle" class="pupUpTitle"></h3>
+                    <h4 id="pupUpSubtitle" class="pupUpSubtitle"></h4>
+                    <p id="pupUpDescription" class="pupUpDescription"></p>
+                    <ul class="listItem">
+                        <li class="pupUpListItem">
+                            <span>
+                                <b>Age:</b> <span id="pupUpAge"><!-- To be filled by JS --></span>
+                            </span>
+                        </li>
+                        <li class="pupUpListItem">
+                            <span>
+                                <b>Inoculations:</b>  <span id="pupUpInoculations"><!-- To be filled by JS --></span>
+                            </span>
+                        </li>
+                        <li class="pupUpListItem">
+                            <span>
+                                <b>Diseases:</b>  <span id="pupUpDiseases"><!-- To be filled by JS --></span>
+                            </span>
+                        </li>
+                        <li class="pupUpListItem">
+                            <span>
+                                <b>Parasites:</b>  <span id="pupUpParasites"><!-- To be filled by JS --></span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -31,7 +53,7 @@
     <section class="background">
         <header class="header">
             <div class="header__conteiner">
-                <a  clas="header__logo" href=""><h1 class="header__textLogo">Cozy House</h1></a>
+                <a clas="header__logo" href=""><h1 class="header__textLogo">Cozy House</h1></a>
                 <p class="header__textLogoBottom">Shelter for pets in Boston</p>
                 <div class="header__menu menu">
                     <nav class="menu__body">
@@ -52,7 +74,9 @@
                         <div class="make__friend__text__block text__block">
                             <h2 class="text__block__title">Not only people need a house</h2>
                             <div class="text__block__text">
-                                <p>We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
+                                <p>We offer to give a chance to a little and nice puppy with an extremely wide and open
+                                    heart. He or she will love you more than anybody else in the world, you will
+                                    see!</p>
                             </div>
 
                             <a href="#ourFrends" class="text__block__button button">Make a friend</a>
@@ -63,7 +87,6 @@
                         <img src="../../assets/images/start-screen-puppy.png" alt="puppy">
                     </div>
                 </div>
-
             </div>
     </section>
     <section class="about__shelter">
@@ -79,7 +102,9 @@
                     <h2 class="about__shelter__title">About the shelter “Cozy House”</h2>
                     <div class="about__shelter__text">
                         <p>
-                            Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.
+                            Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of
+                            them will find a family. The others will continue to live with us and will be waiting for a
+                            lucky chance to become dearly loved.
                         </p>
                         <br>
                         <p>
@@ -104,18 +129,18 @@
                     <button class="arrowLeft">&#8592;</button>
                 </form>
                 <div class="our__friends_body" id="our__friends_body">
-                <!-- to be generated by JS -->
+                    <!-- to be generated by JS -->
                 </div>
                 <form action="#">
                     <button class="arrowRight">&#8594;</button>
                 </form>
             </div>
         </div>
-        <form action="our_pets.html">
+        <form action="../pets/index.html">
             <button class="our__friends_get_the_rest">Get to know the rest</button>
         </form>
     </section>
-    <section  id ="helpShelter"class="help__shelter">
+    <section id="helpShelter" class="help__shelter">
         <div class="help__shelter__conteiner">
             <div class="help__shelter_title">
                 <h2>How you can help<br> our shelter</h2>
@@ -139,7 +164,7 @@
                 </div>
                 <div class="help__shelter__list">
                     <div class="help__shelter__icon">
-                        <img src="../../assets/icons/icon-toys.svg" alt="Toys" >
+                        <img src="../../assets/icons/icon-toys.svg" alt="Toys">
                         <div class="help__shelter__text">
                             Toys
                         </div>
@@ -209,9 +234,12 @@
                     <h3 class="make__donation___subtitle">Name of the bank / Type of bank account</h3>
                     <div class="img__card">
                         <img src="../../assets/icons/credit-card.svg" alt="credit card">
-                        <input  maxlength="24"class="make__donation__numberCard" type="text" name="numberCard" placeholder="8380 2880 8028 8791 7435"/>
+                        <input maxlength="24" class="make__donation__numberCard" type="text" name="numberCard"
+                               placeholder="8380 2880 8028 8791 7435"/>
                     </div>
-                    <p class="make__donation___text">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                    <p class="make__donation___text">Legal information and lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices
+                        maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                 </div>
             </div>
         </div>
@@ -224,12 +252,14 @@
                     <div class="footer__questions">
                         <h2 class="footer__questions__title">For questions and suggestions</h2>
                         <div class="footer__email">
-                            <img  class="img__footer__email" src="../../assets/icons/icon-email.svg" alt="email">
-                            <p><a  class="footer__questions__email" href=" mailto:email@shelter.com">email@shelter.com</a></p>
+                            <img class="img__footer__email" src="../../assets/icons/icon-email.svg" alt="email">
+                            <p><a class="footer__questions__email"
+                                  href=" mailto:email@shelter.com">email@shelter.com</a></p>
                         </div>
                         <div class="footer__phone">
-                            <img  class="img__footer__phone" src="../../assets/icons/icon-phone.svg" alt="phone">
-                            <p><a  class="footer__questions__phone" href="tel: +13 674 567 75 54">+13 674 567 75 54</a></p>
+                            <img class="img__footer__phone" src="../../assets/icons/icon-phone.svg" alt="phone">
+                            <p><a class="footer__questions__phone" href="tel: +13 674 567 75 54">+13 674 567 75 54</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -237,12 +267,16 @@
                     <div class="footer__location">
                         <h2 class="footer__location__title">We are waiting for your visit</h2>
                         <div class="footer__location1">
-                            <img  class="img__footer__address1" src="../../assets/icons/icon-marker.svg" alt="marker">
-                            <p><a class="footer__location__address1" target="_blank" href="https://yandex.ru/maps/223/boston/?from=tabbar&ll=-71.054785%2C42.309957&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjQwMDA4NTc4Ej9Vbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EsIE1hc3NhY2h1c2V0dHMsIFN1ZmZvbGsgQ291bnR5LCBCb3N0b24iCg2IIY7CFeBqKUI%3D&source=serp_navig&z=11.59">1 Central Street, Boston (entrance from the store)</a></p>
+                            <img class="img__footer__address1" src="../../assets/icons/icon-marker.svg" alt="marker">
+                            <p><a class="footer__location__address1" target="_blank"
+                                  href="https://yandex.ru/maps/223/boston/?from=tabbar&ll=-71.054785%2C42.309957&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjQwMDA4NTc4Ej9Vbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EsIE1hc3NhY2h1c2V0dHMsIFN1ZmZvbGsgQ291bnR5LCBCb3N0b24iCg2IIY7CFeBqKUI%3D&source=serp_navig&z=11.59">1
+                                Central Street, Boston (entrance from the store)</a></p>
                         </div>
                         <div class="footer__location2">
-                            <img  class="img__footer__address2" src="../../assets/icons/icon-marker.svg" alt="marker">
-                            <p><a  class="footer__location__address2" target="_blank" href="https://yandex.ru/maps/10393/london/?from=tabbar&ll=-0.090420%2C51.491708&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjI5NzMwMDkzEhZVbml0ZWQgS2luZ2RvbSwgTG9uZG9uIgoNYcICvhWHB05C&source=serp_navig&z=10.02">18 South Park, London</a></p>
+                            <img class="img__footer__address2" src="../../assets/icons/icon-marker.svg" alt="marker">
+                            <p><a class="footer__location__address2" target="_blank"
+                                  href="https://yandex.ru/maps/10393/london/?from=tabbar&ll=-0.090420%2C51.491708&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjI5NzMwMDkzEhZVbml0ZWQgS2luZ2RvbSwgTG9uZG9uIgoNYcICvhWHB05C&source=serp_navig&z=10.02">18
+                                South Park, London</a></p>
                         </div>
                     </div>
                 </div>
@@ -255,6 +289,6 @@
         </footer>
     </section>
 </div>
-<script src="script.js"></script>
+<script   src="script.js"></script>
 </body>
 </html>

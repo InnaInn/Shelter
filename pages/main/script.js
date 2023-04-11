@@ -1,6 +1,22 @@
 let petListArray = [];
-let petListImg = document.getElementById("petListImg")
-let petPopUp = document.getElementById("pet-pop-up")
+let petListImg = document.getElementById("petListImg");
+let petPopUp = document.getElementById("pet-pop-up");
+let pupUpTitle = document.getElementById("pupUpTitle");
+let pupUpSubtitle = document.getElementById("pupUpSubtitle");
+let pupUpDescription =document.getElementById("pupUpDescription");
+let pupUpAge = document.getElementById("pupUpAge");
+let pupUpInoculations = document.getElementById("pupUpInoculations");
+let pupUpDiseases = document.getElementById("pupUpDiseases");
+let pupUpParasites = document.getElementById("pupUpParasites");
+let popUpCloseBtn = document.getElementById("pupUpClose");
+
+// При клике ВНЕ окна - закрываем его
+petPopUp.addEventListener('click', (e) => {
+    if (e.target === petPopUp || e.target.parentElement === petPopUp) {
+        petPopUp.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+});
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -26,17 +42,26 @@ fetch('../../assets/pets.json')
 
 let blockPets = document.getElementById("our__friends_body")
 
+function petCardClick(event) {
+    let element = event.target;
+    while (!element.classList.contains("our__friends__slider")) {
+        element = element.parentElement;
+    }
+    popUpRender(element)
+    petPopUp.classList.remove("hidden")
+}
+
 function renderPets(pets, startIndex) {
     let endIndex = startIndex + 3;
     let adjustedIndex = endIndex < pets.length ? endIndex : pets.length;
     for (let i = startIndex; i < adjustedIndex; i++) {
         let pet = pets[i];
-        const our__friends__slider = document.createElement('div');
-        our__friends__slider.classList.add('our__friends__slider');
-        our__friends__slider.setAttribute('data-id', pet.id);
+        const petCard = document.createElement('div');
+        petCard.classList.add('our__friends__slider');
+        petCard.setAttribute('data-id', pet.id);
 
         // noinspection JSUnresolvedVariable
-        our__friends__slider.innerHTML = `
+        petCard.innerHTML = `
             <div class="our__friends__icon friends__icon">
                 <img src="${pet.img}" alt="${pet.name}'s image">
                 <div class="our__friends__title">${pet.name}</div>
@@ -45,28 +70,38 @@ function renderPets(pets, startIndex) {
                 </div>
             </div>
         `
-        blockPets.prepend(our__friends__slider);
+        blockPets.prepend(petCard);
+        petCard.addEventListener('click',petCardClick)
     }
 }
 
-window.addEventListener('click', function (event) {
-    if (event.target.classList.contains("learn__more")) {
-        popUpRender(event)
-        petPopUp.classList.remove("hidden")
-    }
+popUpCloseBtn.addEventListener('click', () => {
+    petPopUp.classList.add('hidden');
+    document.body.style.overflow = '';
 });
 
+function findPetById(id) {
+    for (let pet of petListArray) {
+        if (id == pet.id) {
+            return pet;
+        }
+    }
+}
 
-function popUpRender(event) {
-    let petNum = event.target.parentElement.parentElement.parentElement.dataset.id;
-    let pet = petListArray[petNum];
+function popUpRender(element) {
+    let petNum = element.dataset.id;
+    let pet = findPetById(petNum);
 
     // noinspection JSUnresolvedVariable
     petListImg.setAttribute('src', pet.img);
+    pupUpTitle.innerText = pet.name;
+    pupUpSubtitle.innerText= pet.type +  "-" + pet.breed;
+    pupUpDescription.innerText= pet.description;
+    pupUpAge.innerText = pet.age;
+    pupUpInoculations.innerText = pet.inoculations;
+    pupUpDiseases.innerText = pet.diseases;
+    pupUpParasites.innerText= pet.parasites;
 
-
-    // pupUpTitle.innerText = book.title;
-
-
+    document.body.style.overflow = 'hidden';
 }
 
