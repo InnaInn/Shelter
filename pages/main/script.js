@@ -1,4 +1,5 @@
 let petListArray = [];
+let sliderStartIndex= 0;
 let petListImg = document.getElementById("petListImg");
 let petPopUp = document.getElementById("pet-pop-up");
 let pupUpTitle = document.getElementById("pupUpTitle");
@@ -37,7 +38,7 @@ fetch('../../assets/pets.json')
             return pet
         });
         shuffleArray(petListArray);
-        renderPets(petListArray, 0);
+        renderPets(petListArray, sliderStartIndex);
     });
 
 let blockPets = document.getElementById("our__friends_body")
@@ -52,10 +53,10 @@ function petCardClick(event) {
 }
 
 function renderPets(pets, startIndex) {
+    blockPets.innerHTML = '';
     let endIndex = startIndex + 3;
-    let adjustedIndex = endIndex < pets.length ? endIndex : pets.length;
-    for (let i = startIndex; i < adjustedIndex; i++) {
-        let pet = pets[i];
+    for (let i = startIndex; i < endIndex; i++) {
+        let pet = pets[i % pets.length];
         const petCard = document.createElement('div');
         petCard.classList.add('our__friends__slider');
         petCard.setAttribute('data-id', pet.id);
@@ -70,7 +71,7 @@ function renderPets(pets, startIndex) {
                 </div>
             </div>
         `
-        blockPets.prepend(petCard);
+        blockPets.append(petCard);
         petCard.addEventListener('click',petCardClick)
     }
 }
@@ -104,4 +105,17 @@ function popUpRender(element) {
 
     document.body.style.overflow = 'hidden';
 }
+/*Слайдер*/
 
+document.getElementById("arrowRight").addEventListener("click", event => {
+    sliderStartIndex += 3;
+    renderPets(petListArray, sliderStartIndex)
+})
+
+document.getElementById("arrowLeft").addEventListener("click", event => {
+    sliderStartIndex -= 3;
+    if (sliderStartIndex < 0) {
+        sliderStartIndex += petListArray.length
+    }
+    renderPets(petListArray, sliderStartIndex)
+})

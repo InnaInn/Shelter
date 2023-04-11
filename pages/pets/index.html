@@ -8,6 +8,47 @@
     <link rel="stylesheet" type="text/css" href="normalize.css">
 </head>
 <body>
+<div id="pet-pop-up" class="pup-up hidden">
+    <div class="pup-up-content">
+        <button class="pupUpClose" id="pupUpClose" type="button">
+            <span class="materialIcons">close</span>
+        </button>
+        <div class="pupUpWrapper">
+            <div class="pupUpContainer">
+                <div class="pupUpImage">
+                    <img id="petListImg" src="" class="petListImg">
+                </div>
+                <div class="petInfoBlock">
+                    <h3 id="pupUpTitle" class="pupUpTitle"></h3>
+                    <h4 id="pupUpSubtitle" class="pupUpSubtitle"></h4>
+                    <p id="pupUpDescription" class="pupUpDescription"></p>
+                    <ul class="listItem">
+                        <li class="pupUpListItem">
+                            <span>
+                                <b>Age:</b> <span id="pupUpAge"><!-- To be filled by JS --></span>
+                            </span>
+                        </li>
+                        <li class="pupUpListItem">
+                            <span>
+                                <b>Inoculations:</b>  <span id="pupUpInoculations"><!-- To be filled by JS --></span>
+                            </span>
+                        </li>
+                        <li class="pupUpListItem">
+                            <span>
+                                <b>Diseases:</b>  <span id="pupUpDiseases"><!-- To be filled by JS --></span>
+                            </span>
+                        </li>
+                        <li class="pupUpListItem">
+                            <span>
+                                <b>Parasites:</b>  <span id="pupUpParasites"><!-- To be filled by JS --></span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="wrapper">
     <header class="header">
         <section>
@@ -158,5 +199,6 @@
         </footer>
     </section>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
