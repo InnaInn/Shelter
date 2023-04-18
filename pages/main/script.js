@@ -1,3 +1,4 @@
+let petListArray = [];
 let sliderStartIndex= 0;
 let petListImg = document.getElementById("petListImg");
 let petPopUp = document.getElementById("pet-pop-up");
@@ -10,6 +11,19 @@ let pupUpDiseases = document.getElementById("pupUpDiseases");
 let pupUpParasites = document.getElementById("pupUpParasites");
 let popUpCloseBtn = document.getElementById("pupUpClose");
 let blockPets = document.getElementById("our__friends_body")
+
+fetch('../../assets/pets.json')
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        petListArray = data.map((pet, index) => {
+            pet.id = index;
+            return pet
+        });
+        shuffleArray(petListArray);
+        renderPets(petListArray);
+    });
 
 // При клике ВНЕ окна - закрываем его
 petPopUp.addEventListener('click', (e) => {
@@ -60,7 +74,7 @@ popUpCloseBtn.addEventListener('click', () => {
 
 function popUpRender(element) {
     let petNum = element.dataset.id;
-    let pet = findPetById(petNum);
+    let pet = findPetById(petListArray, petNum);
 
     // noinspection JSUnresolvedVariable
     petListImg.setAttribute('src', pet.img);

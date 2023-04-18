@@ -55,14 +55,16 @@
     <header class="header">
         <section>
             <div class="header__conteiner">
-                <a  clas="header__logo" href="../main/index.html"><h1 class="header__textLogoOurPets">Cozy House</h1></a>
+                <a clas="header__logo" href="../main/index.html"><h1 class="header__textLogoOurPets">Cozy House</h1></a>
                 <p class="header__textLogoBottomOurPets">Shelter for pets in Boston</p>
                 <div class="header__menu menu">
                     <nav class="menu__body">
                         <ul class="menu__listOurPets">
-                            <li class="menu__item"><a href="../main/index.html" class="menu__linkOurPets">About the shelter</a></li>
+                            <li class="menu__item"><a href="../main/index.html" class="menu__linkOurPets">About the
+                                shelter</a></li>
                             <li class="menu__item"><a href="#" class="menu__linkOurPets" id="click">Our pets</a></li>
-                            <li class="menu__item"><a href="../main/index.html#helpShelter" class="menu__linkOurPets">Help the shelter</a></li>
+                            <li class="menu__item"><a href="../main/index.html#helpShelter" class="menu__linkOurPets">Help
+                                the shelter</a></li>
                             <li class="menu__item"><a href="#contacts" class="menu__linkOurPets">Contacts</a></li>
                         </ul>
                     </nav>
@@ -153,16 +155,14 @@
                     </div>
                 </div>
                 -->
-            </div>
-            <form action="#">
-                <div class="buttonsSwitches">
-                    <button class="buttonsSwitch clicking" disabled><<</button>
-                    <button class="buttonsSwitch clicking" disabled ><</button>
-                    <button class="buttonsSwitch color" >1</button>
-                    <button class="buttonsSwitch">></button>
-                    <button class="buttonsSwitch">>></button>
                 </div>
-            </form>
+                <div class="buttonsSwitches">
+                    <button class="buttonsSwitch clicking" id ="arrowLeftAll" disabled><<</button>
+                    <button class="buttonsSwitch clicking" id = "arrowLeft" disabled><</button>
+                    <button class="buttonsSwitch color" id="countPages">1</button>
+                    <button class="buttonsSwitch clicking" id="arrowRight">></button>
+                    <button class="buttonsSwitch clicking" id ="arrowRightAll">>></button>
+                </div>
         </section>
     </main>
     <section class="background" id="contacts">
@@ -172,12 +172,14 @@
                     <div class="footer__questions">
                         <h2 class="footer__questions__title">For questions and suggestions</h2>
                         <div class="footer__email">
-                            <img  class="img__footer__email" src="../../assets/icons/icon-email.svg" alt="email">
-                            <p><a  class="footer__questions__email" href=" mailto:email@shelter.com">email@shelter.com</a></p>
+                            <img class="img__footer__email" src="../../assets/icons/icon-email.svg" alt="email">
+                            <p><a class="footer__questions__email"
+                                  href=" mailto:email@shelter.com">email@shelter.com</a></p>
                         </div>
                         <div class="footer__phone">
-                            <img  class="img__footer__phone" src="../../assets/icons/icon-phone.svg" alt="phone">
-                            <p><a  class="footer__questions__phone" href="tel: +13 674 567 75 54">+13 674 567 75 54</a></p>
+                            <img class="img__footer__phone" src="../../assets/icons/icon-phone.svg" alt="phone">
+                            <p><a class="footer__questions__phone" href="tel: +13 674 567 75 54">+13 674 567 75 54</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -185,12 +187,16 @@
                     <div class="footer__location">
                         <h2 class="footer__location__title">We are waiting for your visit</h2>
                         <div class="footer__location1">
-                            <img  class="img__footer__address1" src="../../assets/icons/icon-marker.svg" alt="marker">
-                            <p><a class="footer__location__address1" target="_blank" href="https://yandex.ru/maps/223/boston/?from=tabbar&ll=-71.054785%2C42.309957&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjQwMDA4NTc4Ej9Vbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EsIE1hc3NhY2h1c2V0dHMsIFN1ZmZvbGsgQ291bnR5LCBCb3N0b24iCg2IIY7CFeBqKUI%3D&source=serp_navig&z=11.59">1 Central Street, Boston (entrance from the store)</a></p>
+                            <img class="img__footer__address1" src="../../assets/icons/icon-marker.svg" alt="marker">
+                            <p><a class="footer__location__address1" target="_blank"
+                                  href="https://yandex.ru/maps/223/boston/?from=tabbar&ll=-71.054785%2C42.309957&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjQwMDA4NTc4Ej9Vbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EsIE1hc3NhY2h1c2V0dHMsIFN1ZmZvbGsgQ291bnR5LCBCb3N0b24iCg2IIY7CFeBqKUI%3D&source=serp_navig&z=11.59">1
+                                Central Street, Boston (entrance from the store)</a></p>
                         </div>
                         <div class="footer__location2">
-                            <img  class="img__footer__address2" src="../../assets/icons/icon-marker.svg" alt="marker">
-                            <p><a  class="footer__location__address2" target="_blank" href="https://yandex.ru/maps/10393/london/?from=tabbar&ll=-0.090420%2C51.491708&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjI5NzMwMDkzEhZVbml0ZWQgS2luZ2RvbSwgTG9uZG9uIgoNYcICvhWHB05C&source=serp_navig&z=10.02">18 South Park, London</a></p>
+                            <img class="img__footer__address2" src="../../assets/icons/icon-marker.svg" alt="marker">
+                            <p><a class="footer__location__address2" target="_blank"
+                                  href="https://yandex.ru/maps/10393/london/?from=tabbar&ll=-0.090420%2C51.491708&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjI5NzMwMDkzEhZVbml0ZWQgS2luZ2RvbSwgTG9uZG9uIgoNYcICvhWHB05C&source=serp_navig&z=10.02">18
+                                South Park, London</a></p>
                         </div>
                     </div>
                 </div>

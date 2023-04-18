@@ -136,13 +136,16 @@ body {
 	background: #F6F6F6;
 	margin: 60px 0px 100px 0px;
 	cursor: pointer;
+	font-size: 20px;
 }
+button.clicking:disabled {
+	border: 2px #cdcdcd solid;
 
-button.clicking {
-	border: 2px solid #CDCDCD;
-	color:#CDCDCD;
+
 }
-
 button.color{
 	background: #F1CDB3;
+	cursor: default;
+}
+
 }

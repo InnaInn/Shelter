@@ -1,5 +1,3 @@
-let petListArray = [];
-
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -9,21 +7,8 @@ function shuffleArray(array) {
     }
 }
 
-fetch('../../assets/pets.json')
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        petListArray = data.map((pet, index) => {
-            pet.id = index;
-            return pet
-        });
-        shuffleArray(petListArray);
-        renderPets(petListArray);
-    });
-
-function findPetById(id) {
-    for (let pet of petListArray) {
+function findPetById(array, id) {
+    for (let pet of array) {
         if (id == pet.id) {
             return pet;
         }
