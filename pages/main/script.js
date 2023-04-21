@@ -1,3 +1,6 @@
+let mobileVersion = window.matchMedia('(max-width: 768px)');
+let tabletVersion = window.matchMedia('(max-width: 1280px)');
+const numberOfPets = mobileVersion.matches ? 1 : tabletVersion.matches ? 2 : 3;
 let petListArray = [];
 let sliderStartIndex= 0;
 let petListImg = document.getElementById("petListImg");
@@ -10,7 +13,8 @@ let pupUpInoculations = document.getElementById("pupUpInoculations");
 let pupUpDiseases = document.getElementById("pupUpDiseases");
 let pupUpParasites = document.getElementById("pupUpParasites");
 let popUpCloseBtn = document.getElementById("pupUpClose");
-let blockPets = document.getElementById("our__friends_body")
+let blockPets = document.getElementById("our__friends_body");
+let body = document.getElementById("body")
 
 fetch('../../assets/pets.json')
     .then(response => {
@@ -44,7 +48,7 @@ function petCardClick(event) {
 
 function renderPets(pets, startIndex = 0) {
     blockPets.innerHTML = '';
-    let endIndex = startIndex + 3;
+    let endIndex = startIndex + numberOfPets;
     for (let i = startIndex; i < endIndex; i++) {
         let pet = pets[i % pets.length];
 
@@ -96,12 +100,12 @@ function popUpRender(element) {
 /*Слайдер*/
 
 document.getElementById("arrowRight").addEventListener("click", () => {
-    sliderStartIndex += 3;
+    sliderStartIndex += numberOfPets;
     renderPets(petListArray, sliderStartIndex)
 })
 
 document.getElementById("arrowLeft").addEventListener("click", () => {
-    sliderStartIndex -= 3;
+    sliderStartIndex -= numberOfPets;
     if (sliderStartIndex < 0) {
         sliderStartIndex += petListArray.length
     }

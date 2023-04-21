@@ -5,7 +5,7 @@
 *::after {
 	padding: 0;
 	margin: 0;
-	border: 0
+	border: 0;
 	box-sizing: border-box;
 }
 
@@ -33,7 +33,7 @@ html, body {
 }
 
 body {
-	font-family: Rubik;
+	font-family: Rubik, serif;
 	font-size: 12px;
 	color: #616161;
 
@@ -43,7 +43,7 @@ body {
 /*Ограничивающий контейнер*/
 [class*="__conteiner"] {
 	max-width: 1200px;
-	margin: 0px auto;
+	margin: 0 auto;
 
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 .header__textLogoOurPets{
-	font-family: 'Georgia';
+	font-family: 'Georgia', serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 32px;
@@ -72,7 +72,7 @@ body {
 	position: relative;
 	top: 50px;
 	right: 183px;
-	font-family: 'Arial';
+	font-family: 'Arial', serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 13px;
@@ -89,7 +89,7 @@ body {
 }
 
 .menu__linkOurPets{
-	font-family: 'Arial';
+	font-family: 'Arial', serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 15px;
@@ -112,7 +112,7 @@ body {
 .our__friendsPage{
 	margin-top:50px;
 	background: #F6F6F6;
-	padding: 80px 0px 0px 0px;
+	padding: 80px 0 0 0;
 }
 
 .our__friends_bodyOurPets{
@@ -134,18 +134,22 @@ body {
 	width: 52px;
 	height: 52px;
 	background: #F6F6F6;
-	margin: 60px 0px 100px 0px;
+	margin: 60px 0 100px 0;
 	cursor: pointer;
 	font-size: 20px;
 }
+.buttonsSwitch:hover:enabled{
+	background: #FFA07A;
+	border: #FFA07A;
+}
 button.clicking:disabled {
 	border: 2px #cdcdcd solid;
-
+	cursor: default;
 
 }
 button.color{
-	background: #F1CDB3;
+	background: #FFA07A;
 	cursor: default;
 }
 
-}
+
