@@ -16,6 +16,11 @@ let arrowRightElement = document.getElementById("arrowRight");
 let arrowLeftElement = document.getElementById("arrowLeft");
 let arrowRightAll = document.getElementById("arrowRightAll");
 let arrowLeftAll = document.getElementById("arrowLeftAll");
+let body = document.getElementById("body")
+let menuToggle1 = document.getElementById("menu__toggle");
+let menuItem = document.getElementById('menu__item');
+let html = document.querySelector("html");
+
 fetch('../../assets/pets.json')
     .then(response => {
         return response.json();
@@ -138,4 +143,19 @@ arrowLeftElement.addEventListener("click", () => {
 arrowLeftAll.addEventListener("click", () => {
     page = 1;
     processPagination();
+});
+
+menuToggle1.onchange = function () {
+    if (menuToggle1.checked) {
+        html.classList.add("scroll")
+    } else {
+        html.classList.remove("scroll")
+    }
+};
+
+document.addEventListener('click', function (e) {
+    if (["menu__body", "menu__list", "menu__item", "menu__link"].includes(e.target.className)) {
+        menuToggle1.checked = false;
+        menuToggle1.onchange(null);
+    }
 });
