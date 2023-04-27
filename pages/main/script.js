@@ -15,6 +15,9 @@ let pupUpParasites = document.getElementById("pupUpParasites");
 let popUpCloseBtn = document.getElementById("pupUpClose");
 let blockPets = document.getElementById("our__friends_body");
 let body = document.getElementById("body")
+let menuToggle = document.getElementById("menu__toggle");
+let menuItem = document.getElementById('menu__item');
+let html = document.querySelector("html");
 
 fetch('../../assets/pets.json')
     .then(response => {
@@ -111,3 +114,19 @@ document.getElementById("arrowLeft").addEventListener("click", () => {
     }
     renderPets(petListArray, sliderStartIndex)
 })
+
+menuToggle.onchange = function () {
+    if (menuToggle.checked) {
+        html.classList.add("scroll")
+    } else {
+        html.classList.remove("scroll")
+    }
+};
+
+document.addEventListener('click', function (e) {
+    if (["menu__body", "menu__list", "menu__item", "menu__link"].includes(e.target.className)) {
+        menuToggle.checked = false;
+        menuToggle.onchange(null);
+    }
+});
+

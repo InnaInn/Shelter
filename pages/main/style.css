@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+
+#logo1 {
+    display: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -539,6 +544,7 @@ body.overlay::after {
 
 .img__card {
     position: relative;
+
 }
 
 .img__card > img {
@@ -825,7 +831,7 @@ input[placeholder] {
 
 /*Медиа запросы*/
 
-@media all and (min-width: 768px) and (max-width: 1280px) {
+@media all and (min-width: 767px) and (max-width: 1280px) {
 
     .header {
         max-width: none;
@@ -837,6 +843,10 @@ input[placeholder] {
         padding: 30px;
         margin-left: 20px;
         margin-top: -56px;
+    }
+
+    .menu__list {
+        padding-top: 72px;
     }
 
     .make__friend__conteiner {
@@ -863,7 +873,7 @@ input[placeholder] {
 
     }
 
-    .make__friend__conteiner img {
+    .puppy {
         margin-left: 130px;
         width: 569px;
         align-self: center;
@@ -880,11 +890,12 @@ input[placeholder] {
     }
 
     .about__shelter__text__block {
-        margin: 0px 0px 0 168px;
+        margin: 0px 168px 0 168px;
     }
 
-    .about__shelter__image {
+    .imgDogCat {
         position: relative;
+        margin-left: -162px;
     }
 
     .our__friends_body {
@@ -925,8 +936,8 @@ input[placeholder] {
     .make__donation__conteiner {
         flex-direction: column-reverse;
         gap: 60px;
-        padding-top: 80px;
-        padding-bottom: 100px;
+
+
     }
 
     .make__donation__title {
@@ -944,7 +955,7 @@ input[placeholder] {
             "contacts location"
             "dog dog";
         padding: 30px 30px 0;
-        gap: 25px 8.5%;
+        gap: 25px 0.5%;
         justify-content: space-evenly;
         justify-items: right;
     }
@@ -989,21 +1000,96 @@ input[placeholder] {
 
     .listItem .pupUpListItem {
         margin-bottom: 6px;
+
     }
+
+    .footerDog {
+        grid-area: dog;
+    }
+
 }
 
-@media all and (max-width: 768px) {
+@media all and (min-width: 320px) and (max-width: 767px) {
+
+    .header-container {
+        padding: 30px 50px 30px 10px;
+        gap: 16.5%;
+        justify-content: space-between;
+        overflow-y: auto;
+        position: relative;
+    }
+
+    .header__textLogo {
+        margin-top: -80px;
+
+    }
+
+    .menu__body {
+        position: fixed;
+        background: #292929;
+        display: grid;
+        gap: 0;
+        padding: 30px 10px 0;
+        right: -320px;
+        top: 0;
+        height: 100vh;
+        width: 320px;
+        transition: right 0.5s;
+        z-index: 2;
+        align-items: stretch;
+        justify-items: start;
+    }
+
+    .menu__body .menu__list {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        height: 100%;
+        justify-self: center;
+        overflow: hidden;
+    }
+
+    #logo1 {
+        position: relative;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        align-self: flex-start;
+    }
+
+    .menu__item {
+        font-size: 32px;
+        color: #CDCDCD;
+        margin-top: 50px;
+    }
+
+    .menu__item:nth-child(4) {
+        margin-bottom: 68px;
+    }
+
+    .menu__link:focus, #click {
+        color: #FAFAFA;
+        padding-bottom: 0;
+    }
+
+    .menu__item:hover:not(#click) {
+        cursor: pointer;
+        color: #FAFAFA;
+    }
 
     .menu__btn {
-        display: flex; /* используем flex для центрирования содержимого */
-        align-items: center; /* центрируем содержимое кнопки */
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        width: 26px;
-        height: 26px;
+        position: relative;
+        padding: 0;
+        display: block;
+        width: 30px;
+        height: 6px;
         cursor: pointer;
-        z-index: 1;
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+        z-index: 3;
     }
 
     .menu__btn > span,
@@ -1011,45 +1097,26 @@ input[placeholder] {
     .menu__btn > span::after {
         display: block;
         position: absolute;
-        width: 100%;
+        width: 30px;
         height: 2px;
-        background-color: #616161;
+        background-color: #F1CDB3;
+        margin-bottom: 8px;
     }
 
     .menu__btn > span::before {
         content: '';
-        top: -8px;
+        top: -9px;
     }
 
     .menu__btn > span::after {
         content: '';
-        top: 8px;
-    }
-
-    .menu__body {
-        display: block;
-        position: fixed;
-        visibility: hidden;
-        top: 0;
-        left: -100%;
-        width: 300px;
-        height: 100%;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        text-align: center;
-        background-color: #ECEFF1;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        top: 9px;
     }
 
     .menu__link {
-        display: block;
-        padding: 12px 24px;
-        color: #333;
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px;
-        font-weight: 600;
-        text-decoration: none;
+        font-size: 32px;
+        color: #CDCDCD;
+        margin-top: 40px;
     }
 
     #menu__toggle:checked ~ .menu__btn > span {
@@ -1058,6 +1125,283 @@ input[placeholder] {
 
     #menu__toggle:checked ~ .menu__body {
         visibility: visible;
-        left: 0;
+        right: 0;
+
     }
+
+    .header {
+        font-size: 25px;
+        line-height: 32.5px;
+        padding-top: 42px;
+    }
+
+    .make__friend__conteiner {
+        flex-direction: column;
+        gap: 105px;
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+
+    .text__block__title {
+        line-height: 32.5px;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+
+    .make__friend__text__block {
+        padding: 0;
+        text-align: center;
+    }
+
+    .puppy {
+        margin-left: 40px;
+        width: 260px;
+        margin-top: -91px
+    }
+
+    .about__shelter__conteiner {
+        flex-direction: column-reverse;
+        gap: 42px;
+        padding: 0 10px 42px 10px;
+        align-items: center;
+    }
+
+    .about__shelter__content {
+        gap: 22px;
+        margin: 0;
+        align-items: center;
+    }
+
+    .about-text {
+        text-align: justify;
+        padding: 0 15px;
+    }
+
+    .about__shelter__title {
+        text-align: center;
+        padding-bottom: 3px;
+        font-size: 25px;
+        line-height: 32.5px;
+
+    }
+
+    .imgDogCat {
+        max-width: 260px;
+        margin-left: -144px;
+    }
+
+    .our__friends_title {
+        margin: 0;
+        font-size: 25px;
+        line-height: 32.5px;
+
+    }
+
+    .our__friends_get_the_rest {
+        padding: 15px 44.5px;
+        margin-top: 42px;
+        margin-bottom: 42px;
+        margin-left: 40px;
+    }
+
+    .our__friends_body_1 {
+        display: grid;
+        grid-template-areas:
+            "card card"
+            "left right";
+        gap: 20px 80px;
+    }
+
+    .our__friends_body {
+        grid-area: card;
+        justify-self: center;
+    }
+
+    .arrowLeft {
+        grid-area: left;
+        margin-left: 50px;
+    }
+
+    .arrowRight {
+        grid-area: right;
+        margin-left: -78px;
+    }
+
+    .our__friends_body {
+        gap: 0;
+    }
+
+    .help__shelter__conteiner .help__shelter_title {
+        margin: 0;
+        font-size: 25px;
+        line-height: 32.5px;
+        padding-top: 42px;
+    }
+
+    .help__shelter__body {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 28px 30px;
+        padding: 0 15px 42px 15px;
+        margin: 0;
+    }
+
+    .help__shelter__text {
+        font-size: 15px;
+        margin: 13px 0 0;
+    }
+
+    .imgHelp {
+        width: 50px;
+        height: 50px;
+    }
+
+    .make__donation__conteiner {
+        flex-direction: column-reverse;
+        gap: 42px;
+        padding-top: 0;
+        padding-bottom: 42px;
+    }
+
+    .make__donation__text__block {
+        text-align: center;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 45px;
+        margin: 0;
+        gap: 22.2px;
+    }
+
+    .make__donation___subtitle {
+        letter-spacing: 0.001em;
+    }
+
+    .make__donation__title {
+        padding-top: 35px;
+        font-size: 25px;
+        line-height: 32.5px;
+    }
+
+    .make__donation__numberCard {
+        width: 281px;
+        padding: 13px 15px 13px 15px;
+        font-size: 15px;
+    }
+
+    .make__donation___text {
+        text-align: justify;
+
+    }
+
+    .donationDog {
+        max-width: 260px;
+        margin-left: -109px;
+    }
+
+    .make__donation {
+        padding: 0;
+    }
+
+    .footer__conteiner {
+        display: grid;
+        grid-template-areas:
+            "contacts"
+            "location"
+            "dog";
+
+        padding: 30px 10px 0;
+        justify-items: center;
+        gap: 40px;
+    }
+
+    .footer__questions__title {
+        font-size: 25px;
+        line-height: 32.5px;
+        width: 278px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer__location__title {
+        font-size: 25px;
+        line-height: 32.5px;
+        width: 278px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer__questions__email, .footer__questions__phone, .footer__location__address1, .footer__location__address2 {
+        text-align: center;
+    }
+
+
+    .footerDog {
+        max-width: 260px;
+    }
+
+    .pupUpContainer {
+        width: 240px;
+        min-height: 0;
+    }
+
+    .pupUpTitle {
+        font-size: 35px;
+        padding: 0 0 11px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .pup-up-content {
+        align-items: center;
+        margin-top: -19px
+    }
+
+    .pupUpDescription {
+        text-align: justify;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .pupUpClose {
+        top: 2px;
+        left: 220px;
+    }
+
+    .petListImg {
+        display: none;
+    }
+
+    .petInfoBlock {
+        padding: 0 0 20px 0;
+
+    }
+
+    .pupUpSubtitle {
+        padding-bottom: 20px;
+        letter-spacing: 0;
+        padding-left: 8px;
+        text-align: center;
+    }
+
+    .listItem {
+        padding-left: 23px;
+        padding-top: 20px;
+
+    }
+    #header__logo {
+        margin-top: 12px;
+    }
+    .menu__list {
+        padding-top: 2px;
+    }
+
+    .scroll{
+        overflow:hidden;
+    }
+
+
 }
+
