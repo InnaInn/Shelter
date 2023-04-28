@@ -43,6 +43,11 @@ body {
     visibility: hidden;
 }
 
+#menu__body {
+    padding-right: 3px;
+    margin-top: -22px;
+}
+
 
 /*Ограничивающий контейнер*/
 [class*="__conteiner"] {
@@ -159,16 +164,30 @@ body {
 /**/
 
 .our__friendsPage {
-    margin-top: 50px;
+    margin-top: 41px;
     background: #F6F6F6;
     padding: 80px 0 0 0;
+
 }
 
 .our__friends_bodyOurPets {
     display: flex;
-    gap: 40px 30px;
+    gap: 0px 40px;
     flex-wrap: wrap;
     margin-top: 60px;
+
+
+}
+
+.our__friends_title1 {
+    text-align: center;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
 
 }
 
@@ -176,6 +195,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: -31px;
 
 }
 
@@ -247,116 +267,119 @@ button.color {
 }
 
 @media all and (min-width: 320px) and (max-width: 767px) {
-	.headerpets {
-		padding: 30px 50px 30px 10px;
-		gap: 16.5%;
-		justify-content: space-between;
-		overflow-y: auto;
-		position: relative;
-	}
+    .headerpets {
+        padding: 30px 50px 30px 10px;
+        gap: 16.5%;
+        justify-content: space-between;
+        overflow-y: auto;
+        position: relative;
+    }
 
-	.titleMain {
-		font-size: 25px;
-		line-height: 32.5px;
-		padding: 42px 0;
-		margin-top: -34px;
-	}
+    .titleMain {
+        font-size: 25px;
+        line-height: 32.5px;
+        padding: 42px 0;
+        margin-top: -34px;
+    }
 
-	.our__friends_bodyOurPets {
-		display: flex;
-		flex-direction: column;
-		gap: 29px 0;
-		align-items: center;
-	}
+    .our__friends_bodyOurPets {
+        display: flex;
+        flex-direction: column;
+        gap: 29px 0;
+        align-items: center;
+    }
 
-	.buttonsSwitches {
-		padding: 41px 0;
-		gap: 10px;
-	}
+    .buttonsSwitches {
+        padding: 41px 0;
+        gap: 10px;
+    }
 
-	.header__textLogo1 {
-		margin-top: -34px;
-	}
+    .header__textLogo1 {
+        margin-top: -34px;
+    }
 
-	.menu__btn1 {
-		position: relative;
-		padding: 0;
-		display: block;
-		width: 30px;
-		height: 6px;
-		cursor: pointer;
-		appearance: none;
-		background: none;
-		outline: none;
-		border: none;
-		z-index: 3;
-        
-	}
+    .menu__btn1 {
+        position: relative;
+        padding: 0;
+        display: block;
+        width: 30px;
+        height: 6px;
+        cursor: pointer;
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+        z-index: 3;
 
-	.menu__btn1 > span,
-	.menu__btn1 > span::before,
-	.menu__btn1 > span::after {
-		display: block;
-		position: absolute;
-		width: 30px;
-		height: 2px;
-		background-color: #000000;
-		margin-bottom: 8px;
-	}
+    }
 
-	.menu__btn1 > span::before {
-		content: '';
-		top: -9px;
-	}
+    .menu__btn1 > span,
+    .menu__btn1 > span::before,
+    .menu__btn1 > span::after {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: #000000;
+        margin-bottom: 8px;
+    }
 
-	.menu__btn1 > span::after {
-		content: '';
-		top: 9px;
-	}
+    .menu__btn1 > span::before {
+        content: '';
+        top: -9px;
+    }
 
-	.menu__link {
-		font-size: 32px;
-		color: #CDCDCD;
-		margin-top: 40px;
-	}
+    .menu__btn1 > span::after {
+        content: '';
+        top: 9px;
+    }
 
-	#menu__toggle1:checked ~ .menu__btn1 > span {
-		background-color: #F1CDB3;
-		transform: rotate(90deg);
-	}
-	#menu__toggle1:checked ~ .menu__btn1 > span:before,
-	#menu__toggle1:checked ~ .menu__btn1 > span:after {
-		background-color: #F1CDB3;
-	}
+    .menu__link {
+        font-size: 32px;
+        color: #CDCDCD;
+        margin-top: 40px;
+    }
 
-	#menu__toggle1:checked ~ .menu__body {
-		visibility: visible;
-		right: 0;
-	}
+    #menu__toggle1:checked ~ .menu__btn1 > span {
+        background-color: #F1CDB3;
+        transform: rotate(90deg);
+    }
 
-	#menu__toggle1 {
-		opacity: 0;
-	}
+    #menu__toggle1:checked ~ .menu__btn1 > span:before,
+    #menu__toggle1:checked ~ .menu__btn1 > span:after {
+        background-color: #F1CDB3;
+    }
 
-	.menu__link1 {
-		font-size: 32px;
-		color: #CDCDCD;
-		margin-top: 68px;
-	}
+    #menu__toggle1:checked ~ .menu__body {
+        visibility: visible;
+        right: 0;
+    }
 
-	.our__friendsPage {
-		padding: 0;
-	}
+    #menu__toggle1 {
+        opacity: 0;
+    }
 
-	.header__menu {
-		margin-top: 20px;
-	}
+    .menu__link1 {
+        font-size: 32px;
+        color: #CDCDCD;
+        margin-top: 68px;
+    }
 
-	.scroll {
-		overflow: hidden;
-	}
+    .our__friendsPage {
+        padding: 0;
+    }
 
+    .header__menu {
+        margin-top: 20px;
+    }
+
+    .scroll {
+        overflow: hidden;
+    }
+
+    #menu__body {
+        margin-top: 0;
+        padding-right: 3px;
+    }
 
 }
-
-

@@ -2,12 +2,12 @@ let mobileVersion = window.matchMedia('(max-width: 768px)');
 let tabletVersion = window.matchMedia('(max-width: 1280px)');
 const numberOfPets = mobileVersion.matches ? 1 : tabletVersion.matches ? 2 : 3;
 let petListArray = [];
-let sliderStartIndex= 0;
+let sliderStartIndex = 0;
 let petListImg = document.getElementById("petListImg");
 let petPopUp = document.getElementById("pet-pop-up");
 let pupUpTitle = document.getElementById("pupUpTitle");
 let pupUpSubtitle = document.getElementById("pupUpSubtitle");
-let pupUpDescription =document.getElementById("pupUpDescription");
+let pupUpDescription = document.getElementById("pupUpDescription");
 let pupUpAge = document.getElementById("pupUpAge");
 let pupUpInoculations = document.getElementById("pupUpInoculations");
 let pupUpDiseases = document.getElementById("pupUpDiseases");
@@ -87,8 +87,8 @@ function popUpRender(element) {
     petListImg.setAttribute('src', pet.img);
     pupUpTitle.innerText = pet.name;
     // noinspection JSUnresolvedVariable
-    pupUpSubtitle.innerText= pet.type +  "-" + pet.breed;
-    pupUpDescription.innerText= pet.description;
+    pupUpSubtitle.innerText = pet.type + "-" + pet.breed;
+    pupUpDescription.innerText = pet.description;
     // noinspection JSUnresolvedVariable
     pupUpAge.innerText = pet.age;
     // noinspection JSUnresolvedVariable
@@ -96,10 +96,11 @@ function popUpRender(element) {
     // noinspection JSUnresolvedVariable
     pupUpDiseases.innerText = pet.diseases;
     // noinspection JSUnresolvedVariable
-    pupUpParasites.innerText= pet.parasites;
+    pupUpParasites.innerText = pet.parasites;
 
     document.body.style.overflow = 'hidden';
 }
+
 /*Слайдер*/
 
 document.getElementById("arrowRight").addEventListener("click", () => {
@@ -125,7 +126,7 @@ menuToggle.onchange = function () {
 
 document.addEventListener('click', function (e) {
     if (["menu__body", "menu__list", "menu__item", "menu__link", "burgerOverlay"]
-            .includes(e.target.className)) {
+        .includes(e.target.className)) {
         menuToggle.checked = false;
         menuToggle.onchange(null);
     }
