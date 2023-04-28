@@ -452,8 +452,9 @@ body.overlay::after {
     letter-spacing: 0.06em;
     color: #292929;
     border: none;
-    margin: 29px 0px 100px 544px;
+    margin: 29px auto 100px auto;
     cursor: pointer;
+    display: table;
 }
 
 .our__friends_get_the_rest:hover {
@@ -478,20 +479,19 @@ body.overlay::after {
 
 .help__shelter__body {
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0 20px;
     text-align: center;
     padding: 0px 0px 85px 0px;
-
 }
 
 
 .help__shelter__list {
-
-
     padding: 60px 0px 0px 0px;
     flex: 1 1 200px;
+    max-width: 215px;
 }
 
 .help__shelter__text {
@@ -505,23 +505,6 @@ body.overlay::after {
     color: #545454;
 
 }
-
-
-.help__shelter__list:nth-child(6) {
-    margin-left: 85px;
-
-}
-
-.help__shelter__list:nth-child(7) {
-    margin-left: -5px;
-
-}
-
-.help__shelter__list:nth-child(8) {
-    margin-left: -5px;
-
-}
-
 
 .help__shelter__list img {
     margin-bottom: 30px;
@@ -917,12 +900,6 @@ input[placeholder] {
         margin: 26px 0px 0px 10px;
     }
 
-    .our__friends_get_the_rest {
-        margin-left: 33%;
-
-
-    }
-
     .help__shelter__conteiner .help__shelter_title {
         margin-bottom: 58px;
     }
@@ -1209,9 +1186,6 @@ input[placeholder] {
 
     .our__friends_get_the_rest {
         padding: 15px 44.5px;
-        margin-top: 42px;
-        margin-bottom: 42px;
-        margin-left: 40px;
     }
 
     .our__friends_body_1 {
