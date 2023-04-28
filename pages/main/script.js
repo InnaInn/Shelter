@@ -124,7 +124,8 @@ menuToggle.onchange = function () {
 };
 
 document.addEventListener('click', function (e) {
-    if (["menu__body", "menu__list", "menu__item", "menu__link"].includes(e.target.className)) {
+    if (["menu__body", "menu__list", "menu__item", "menu__link", "burgerOverlay"]
+            .includes(e.target.className)) {
         menuToggle.checked = false;
         menuToggle.onchange(null);
     }

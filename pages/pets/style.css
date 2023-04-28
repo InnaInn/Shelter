@@ -290,6 +290,7 @@ button.color {
 		outline: none;
 		border: none;
 		z-index: 3;
+        
 	}
 
 	.menu__btn1 > span,
@@ -354,6 +355,7 @@ button.color {
 	.scroll {
 		overflow: hidden;
 	}
+
 
 }
 
