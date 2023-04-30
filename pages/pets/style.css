@@ -235,7 +235,7 @@ button.color {
         gap: 11%;
         padding: 30px;
         justify-content: center;
-        margin-top: -48px
+        margin-top: -30px
     }
 
     .titleMain {
@@ -251,6 +251,11 @@ button.color {
         gap: 30px 5%;
         justify-items: center;
         justify-content: center;
+        margin: 0;
+
+    }
+    .buttonsSwitches {
+        padding: -40px 0 -76px 0;
     }
 
     .our__friendsPage {
@@ -287,10 +292,11 @@ button.color {
         flex-direction: column;
         gap: 29px 0;
         align-items: center;
+        margin-top: 0;
     }
 
     .buttonsSwitches {
-        padding: 41px 0;
+        margin: -42px;
         gap: 10px;
     }
 

@@ -1,4 +1,4 @@
-let mobileVersion = window.matchMedia('(max-width: 768px)');
+let mobileVersion = window.matchMedia('(max-width: 767px)');
 let tabletVersion = window.matchMedia('(max-width: 1280px)');
 const numberOfPets = mobileVersion.matches ? 1 : tabletVersion.matches ? 2 : 3;
 let petListArray = [];

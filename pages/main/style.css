@@ -484,7 +484,7 @@ body.overlay::after {
     flex-wrap: wrap;
     gap: 0 20px;
     text-align: center;
-    padding: 0px 0px 85px 0px;
+    padding: 0px 0px 100px 0px;
 }
 
 
@@ -519,7 +519,7 @@ body.overlay::after {
 .make__donation__numberCard {
     background: #F1CDB3;
     border-radius: 9px;
-    width: 295px;
+    width: 349px;
     padding: 10px 15px;
     border: none;
 
@@ -607,7 +607,7 @@ input[placeholder] {
     line-height: 18px;
     color: #B2B2B2;
     max-width: 380px;
-    margin: 20px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
 
 }
 
@@ -828,6 +828,10 @@ input[placeholder] {
         margin-top: -56px;
     }
 
+    .donationDog{
+        margin-left: -114px;
+    }
+
     .menu__list {
         padding-top: 72px;
     }
@@ -847,19 +851,35 @@ input[placeholder] {
 
     .make__friend__conteiner .make__friend__text__block {
 
-        max-width: 430px;
+        max-width: 472px;
 
     }
 
-    .make__friend__conteiner .make__friend__text__block .text__block__button {
-        align-self: center;
 
+    .about__shelter__text{
+        margin-left: -7px;
+    }
+
+    .about__shelter__title:not(:last-child){
+        margin: 0px 0px 25px -6px;
+    }
+
+
+    .make__friend__conteiner .make__friend__text__block .text__block__button {
+        display: table;
+        margin: auto;
+
+    }
+
+    .text__block__text:not(:last-child){
+       margin: 0px 0px 42px 0px;
     }
 
     .puppy {
         margin-left: 130px;
         width: 569px;
         align-self: center;
+        margin-top: -100px;
 
     }
 
@@ -901,7 +921,7 @@ input[placeholder] {
     }
 
     .help__shelter__conteiner .help__shelter_title {
-        margin-bottom: 58px;
+        margin-bottom: 60px;
     }
 
     .help__shelter__body {
@@ -950,6 +970,8 @@ input[placeholder] {
         align-items: center;
         border-radius: 9px;
         background-color: #FAFAFA;
+        height: 269px;
+
     }
 
     .petListImg {
@@ -959,6 +981,10 @@ input[placeholder] {
     .petInfoBlock {
         width: 260px;
         margin: 14px 9px 37px 11px;
+    }
+
+    .our__friends_get_the_rest {
+        margin: 60px auto 100px auto;
     }
 
     .pupUpTitle {
@@ -984,6 +1010,7 @@ input[placeholder] {
 
     .footerDog {
         grid-area: dog;
+        margin-right: -63px;
     }
 
 }
@@ -1001,6 +1028,10 @@ input[placeholder] {
     .header__textLogo {
         margin-top: -78px;
 
+    }
+
+    .text__block__title:not(:last-child) {
+        margin: 42px 0px 42px 20px;
     }
 
     .menu__body {
@@ -1027,6 +1058,7 @@ input[placeholder] {
         overflow-y: auto;
         height: 100%;
         justify-self: center;
+        padding: 120px 0px 0px 0px;
 
     }
 
@@ -1185,7 +1217,8 @@ input[placeholder] {
     }
 
     .our__friends_get_the_rest {
-        padding: 15px 44.5px;
+        padding: 15px 3.5px;
+        margin: 42px auto 42px auto;
     }
 
     .our__friends_body_1 {
@@ -1204,15 +1237,21 @@ input[placeholder] {
     .arrowLeft {
         grid-area: left;
         margin-left: 50px;
+        margin-top: -32px;
     }
 
     .arrowRight {
         grid-area: right;
         margin-left: -78px;
+        margin-top: -32px;
     }
 
     .our__friends_body {
         gap: 0;
+    }
+
+    .help__shelter__list {
+        padding: 42px 0px 0px 0px;
     }
 
     .help__shelter__conteiner .help__shelter_title {
@@ -1228,6 +1267,7 @@ input[placeholder] {
         gap: 28px 30px;
         padding: 0 15px 42px 15px;
         margin: 0;
+        justify-content: space-evenly;
     }
 
     .help__shelter__text {
@@ -1261,7 +1301,7 @@ input[placeholder] {
     }
 
     .make__donation__title {
-        padding-top: 35px;
+        padding-top: 42px;
         font-size: 25px;
         line-height: 32.5px;
     }
@@ -1279,7 +1319,7 @@ input[placeholder] {
 
     .donationDog {
         max-width: 260px;
-        margin-left: -109px;
+        margin-left: -134px;
     }
 
     .make__donation {
@@ -1339,12 +1379,12 @@ input[placeholder] {
 
     .pup-up-content {
         align-items: center;
-        margin-top: -19px
+        margin: 0;
     }
 
     .pupUpDescription {
         text-align: justify;
-        padding: 8px;
+        padding: 10px;
         font-size: 13px;
     }
 
@@ -1366,12 +1406,12 @@ input[placeholder] {
         padding-bottom: 20px;
         letter-spacing: 0;
         padding-left: 8px;
-        text-align: center;
+
     }
 
     .listItem {
-        padding-left: 23px;
-        padding-top: 20px;
+        padding-left: 25px;
+        padding-top: 24px;
 
     }
 
@@ -1395,7 +1435,22 @@ input[placeholder] {
         left: 0;
         z-index: 1;
     }
+    .about__shelter__title:not(:last-child) {
+        margin: 42px 52px 26px 61px;
+    }
 
+    .about__shelter__text{
+        display: table;
+        margin: auto;
+    }
+
+    .about__shelter {
+        padding: 0px 10px 42px 10px;
+    }
+
+    .our__friends {
+        padding: 42px 0px 0px 0px;
+    }
 
 }
 
