@@ -1156,6 +1156,7 @@ input[placeholder] {
 
     #menu__toggle:checked ~ .burgerOverlay {
         visibility: visible;
+        background: rgba(41, 41, 41, 0.6);
     }
 
     .header {

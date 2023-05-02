@@ -286,6 +286,7 @@ button.color {
     .menu__listOurPets {
         padding-top: 65px;
     }
+
 }
 
 @media all and (min-width: 319px) and (max-width: 767px) {
