@@ -1,6 +1,9 @@
 let mobileVersion = window.matchMedia('(max-width: 767px)');
 let tabletVersion = window.matchMedia('(max-width: 1279px)');
-const numberOfPets = mobileVersion.matches ? 1 : tabletVersion.matches ? 2 : 3;
+function resolveNumberOfPets() {
+    return mobileVersion.matches ? 1 : tabletVersion.matches ? 2 : 3;
+}
+let numberOfPets = resolveNumberOfPets();
 let petListArray = [];
 let sliderStartIndex = 0;
 let petListImg = document.getElementById("petListImg");
@@ -18,6 +21,14 @@ let body = document.getElementById("body")
 let menuToggle = document.getElementById("menu__toggle");
 let menuItem = document.getElementById('menu__item');
 let html = document.querySelector("html");
+
+window.addEventListener('resize', () => {
+    let currentNumberOfPets = resolveNumberOfPets();
+    if (currentNumberOfPets !== numberOfPets) {
+        numberOfPets = currentNumberOfPets;
+        renderPets(petListArray, sliderStartIndex);
+    }
+});
 
 fetch('../../assets/pets.json')
     .then(response => {
