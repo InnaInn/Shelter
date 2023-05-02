@@ -517,16 +517,27 @@ body.overlay::after {
 }
 
 .make__donation__numberCard {
-    background: #F1CDB3;
+    font-family: 'Georgia';
     border-radius: 9px;
     width: 349px;
     padding: 10px 15px;
     border: none;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    background: url(../../assets/icons/credit-card.svg) no-repeat left center;
 
 }
 
 .img__card {
-    position: relative;
+    margin: 0;
+    background-color: #F1CDB3;
+    border-radius: 9px;
+    padding: 0px 0px 0px 10px;
 
 }
 
