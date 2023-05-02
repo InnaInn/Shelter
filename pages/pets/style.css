@@ -225,6 +225,7 @@ button.clicking:disabled {
 
 button.color {
     background: #FFA07A;
+    border: #FFA07A;
     cursor: default;
 }
 
