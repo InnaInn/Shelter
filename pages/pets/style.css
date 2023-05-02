@@ -154,7 +154,9 @@ body {
     font-size: 15px;
 
 }
-
+.menu__link1:hover {
+    color: #000000;
+}
 .menu__link1:focus, #click {
     padding-bottom: 3px;
     border-bottom: 3px solid #F1CDB3;;
