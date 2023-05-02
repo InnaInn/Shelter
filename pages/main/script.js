@@ -1,5 +1,5 @@
 let mobileVersion = window.matchMedia('(max-width: 767px)');
-let tabletVersion = window.matchMedia('(max-width: 1280px)');
+let tabletVersion = window.matchMedia('(max-width: 1279px)');
 const numberOfPets = mobileVersion.matches ? 1 : tabletVersion.matches ? 2 : 3;
 let petListArray = [];
 let sliderStartIndex = 0;
