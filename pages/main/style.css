@@ -1436,7 +1436,7 @@ input[placeholder] {
         z-index: 1;
     }
     .about__shelter__title:not(:last-child) {
-        margin: 42px 52px 26px 61px;
+        margin: 42px 16px 25px 11px;
     }
 
     .about__shelter__text{
